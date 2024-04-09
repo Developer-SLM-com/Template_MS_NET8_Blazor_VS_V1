@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject Models.Components components
+
 
 <div class="container">
     <table class="tableheader">
@@ -21,18 +23,24 @@
             <div class="tablerowdiv wrapper"><BottomLeft /><BottomRight /></div>
         </tr>
 
-        <tr class="StatusBar"><div class="tablerowdiv"><StatusBar /></div></tr>
+        <tr class="StatusBar"><div class="tablerowdiv" style="@ComponentStyle("StatusBar")"><StatusBar /></div></tr>
+
         <tr class="Footer"><div class="tablerowdiv"><Footer /></div></tr>
+
     </table>
 </div>
-
-
-
-
-
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code{
+
+    private string ComponentStyle(string ComponentName)
+    {
+        return components.componentStyle(ComponentName);
+    }
+
+}

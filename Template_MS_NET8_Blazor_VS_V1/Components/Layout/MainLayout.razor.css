@@ -1,0 +1,48 @@
+.container {
+    padding-right: 14px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif border: solid 1px red;
+    border: solid 4px red;
+}
+
+.tableheader {
+    margin: 0px;
+    padding: 0px;
+    border: solid 4px green;
+}
+
+.tablerowdiv {
+    margin: 0px;
+    padding: 0px;
+    border: solid 4px darkred;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-weight: normal;
+    text-align: left;
+    align-content: stretch;
+}
+
+
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }

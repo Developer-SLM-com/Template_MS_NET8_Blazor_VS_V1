@@ -8,6 +8,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddSingleton<Components>();                                           // dependency injection
+builder.Services.AddSingleton<StyleAttributes>();                                      // dependency injection
 
 var app = builder.Build();
 

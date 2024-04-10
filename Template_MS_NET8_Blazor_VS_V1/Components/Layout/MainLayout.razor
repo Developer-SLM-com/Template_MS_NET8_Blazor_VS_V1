@@ -6,26 +6,35 @@
     <table class="tableheader">
 
         <tr class="BrandingTopMenu">
-            <div class="tablerowdiv wrapper"><Branding /><TopMenu /></div>
+            <div class="tablerowdiv wrapper" style="@borderStyle("Branding","TopMenu")">
+                <div style="@ComponentStyle("Branding")"><Branding /></div>
+                <div style="@ComponentStyle("TopMenu")"><TopMenu /></div>
+            </div>
         </tr>
 
         <tr class="Body">
             <div class="tablerowdiv wrapper">
-                <div><MenuControl /><LeftBar /></div>
+                <div>
+                    <div style="@ComponentStyle("MenuControl")"><MenuControl /></div>
+                    <div style="@ComponentStyle("LeftBar")"><LeftBar /></div>
+                </div>
                 <div style="display:inline-flex; float:right;">
                     <div>@Body</div>
-                    <div><RightBar /></div>
+                    <div style="@ComponentStyle("RightBar")"><RightBar /></div>
                 </div>
             </div>
         </tr>
 
         <tr class="BottomLeftRight">
-            <div class="tablerowdiv wrapper"><BottomLeft /><BottomRight /></div>
+            <div class="tablerowdiv wrapper" style="@borderStyle("BottomLeft","BottomRight")">
+                <div style="@ComponentStyle("BottomLeft")"><BottomLeft /></div>
+                <div style="@ComponentStyle("BottomRight")"><BottomRight /></div>
+            </div>
         </tr>
 
         <tr class="StatusBar"><div class="tablerowdiv" style="@ComponentStyle("StatusBar")"><StatusBar /></div></tr>
 
-        <tr class="Footer"><div class="tablerowdiv"><Footer /></div></tr>
+        <tr class="Footer"><div class="tablerowdiv" style="@ComponentStyle("Footer")"><Footer /></div></tr>
 
     </table>
 </div>
@@ -41,6 +50,11 @@
     private string ComponentStyle(string ComponentName)
     {
         return components.componentStyle(ComponentName);
+    }
+
+    public string borderStyle(string ComponentName1, string ComponentName2)
+    {
+        return components.borderStyle(ComponentName1, ComponentName2);
     }
 
 }

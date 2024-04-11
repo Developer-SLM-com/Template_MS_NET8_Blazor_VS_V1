@@ -40,7 +40,7 @@ namespace Template_MS_NET8_Blazor_VS_V1.Models
         {
             int index = ComponentsCollection.Select((c, i) => new { c, i }).First(x => x.c.Name == ComponentName).i;
             Component c = ComponentsCollection[index];
-            return c.IsVisible ? "display:flex" : "display:none";
+            return c.IsVisible ? "display:flex; " : "display:none; ";
         }
 
         public string borderStyle(string ComponentName1,string ComponentName2)
@@ -49,7 +49,7 @@ namespace Template_MS_NET8_Blazor_VS_V1.Models
             int index2 = ComponentsCollection.Select((c, i) => new { c, i }).First(x => x.c.Name == ComponentName2).i;
             return ComponentsCollection[index1].IsVisible == true 
                 || ComponentsCollection[index1].IsVisible == true 
-                ? "border: 4px solid darkred" : "border: none";
+                ? "border: 4px solid darkred; " : "border: none; ";
         }
     }
 

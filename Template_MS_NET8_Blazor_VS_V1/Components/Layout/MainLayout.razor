@@ -4,12 +4,14 @@
 
 
 <div class="container" style="@styleAttributes.GetSettings("default","MainLayout","Container")">
-    <table class="tableheader">
+
+    <table class="tableheader" style="@styleAttributes.GetSettings("default","MainLayout","TableHeader")">
 
         <tr class="BrandingTopMenu">
-            <div class="tablerowdiv wrapper" style="@borderStyle("Branding","TopMenu")">
-                <div style="@ComponentStyle("Branding")"><Branding /></div>
-                <div style="@ComponentStyle("TopMenu")"><TopMenu /></div>
+            <div class="tablerowdiv wrapper" style="@(borderStyle("Branding","TopMenu")
+                                                    + @styleAttributes.GetSettings("default","MainLayout","TableRowDiv"))">
+                <div style="@(ComponentStyle("Branding") + @styleAttributes.GetSettings("default","MainLayout","Branding"))"><Branding /></div>
+                <div style="@(ComponentStyle("TopMenu") + @styleAttributes.GetSettings("default","MainLayout","TopMenu"))"><TopMenu /></div>
             </div>
         </tr>
 

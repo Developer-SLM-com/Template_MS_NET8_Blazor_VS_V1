@@ -30,6 +30,10 @@ namespace Template_MS_NET8_Blazor_VS_V1.Models
         public void MockData(Collection<StyleAttribute> sa)
         {
             sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Container", Key = "border", Value = "solid 1px red" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableHeader", Key = "border", Value = "solid 1px green" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableRowDiv", Key = "border", Value = "solid 1px darkred" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Branding", Key = "border", Value = "solid 1px Green" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TopMenu", Key = "border", Value = "solid 1px darkblue" });
         }
 
         public string? GetSettings(string theme, string section
@@ -57,6 +61,7 @@ namespace Template_MS_NET8_Blazor_VS_V1.Models
                     }
                 }
             }
+            Console.WriteLine("GetSettings.result: " + result);
             return result;
         }
 

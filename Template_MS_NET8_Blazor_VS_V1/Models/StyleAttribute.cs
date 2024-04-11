@@ -29,11 +29,19 @@ namespace Template_MS_NET8_Blazor_VS_V1.Models
 
         public void MockData(Collection<StyleAttribute> sa)
         {
-            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Container", Key = "border", Value = "solid 1px red" });
-            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableHeader", Key = "border", Value = "solid 1px green" });
-            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableRowDiv", Key = "border", Value = "solid 1px darkred" });
-            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Branding", Key = "border", Value = "solid 1px Green" });
-            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TopMenu", Key = "border", Value = "solid 1px darkblue" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Container", Key = "border", Value = "solid 2px red" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableHeader", Key = "border", Value = "solid 2px green" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TableRowDiv", Key = "border", Value = "solid 2px darkred" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Branding", Key = "border", Value = "solid 2px Green" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "TopMenu", Key = "border", Value = "solid 2px darkblue" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "MenuControl", Key = "border", Value = "solid 2px orange" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "LeftBar", Key = "border", Value = "solid 2px yellow" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Body", Key = "border", Value = "solid 2px pink" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "RightBar", Key = "border", Value = "solid 2px blue" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "BottomLeft", Key = "border", Value = "solid 2px green" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "BottomRight", Key = "border", Value = "solid 2px blue" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "StatusBar", Key = "border", Value = "solid 2px pink" });
+            sa.Add(new StyleAttribute { Theme = "default", Section = "MainLayout", SubSection = "Footer", Key = "border", Value = "solid 2px orange" });
         }
 
         public string? GetSettings(string theme, string section

@@ -10,34 +10,55 @@
         <tr class="BrandingTopMenu">
             <div class="tablerowdiv wrapper" style="@(borderStyle("Branding","TopMenu")
                                                     + @styleAttributes.GetSettings("default","MainLayout","TableRowDiv"))">
-                <div style="@(ComponentStyle("Branding") + @styleAttributes.GetSettings("default","MainLayout","Branding"))"><Branding /></div>
-                <div style="@(ComponentStyle("TopMenu") + @styleAttributes.GetSettings("default","MainLayout","TopMenu"))"><TopMenu /></div>
+                <div style="@(ComponentStyle("Branding") 
+                          + @styleAttributes.GetSettings("default","MainLayout","Branding"))"><Branding /></div>
+                <div style="@(ComponentStyle("TopMenu") 
+                          + @styleAttributes.GetSettings("default","MainLayout","TopMenu"))"><TopMenu /></div>
             </div>
         </tr>
 
         <tr class="Body">
             <div class="tablerowdiv wrapper">
                 <div>
-                    <div style="@ComponentStyle("MenuControl")"><MenuControl /></div>
-                    <div style="@ComponentStyle("LeftBar")"><LeftBar /></div>
+                    <div style="@(ComponentStyle("MenuControl")
+                                + @styleAttributes.GetSettings("default","MainLayout","MenuControl"))">
+                                <MenuControl /></div>
+                    <div style="@(ComponentStyle("LeftBar")
+                                + @styleAttributes.GetSettings("default","MainLayout","LeftBar"))">
+                                <LeftBar /></div>
                 </div>
                 <div style="display:inline-flex; float:right;">
-                    <div>@Body</div>
-                    <div style="@ComponentStyle("RightBar")"><RightBar /></div>
+                    <div style="@styleAttributes.GetSettings("default","MainLayout","Body"))">
+                        @Body</div>
+                    <div style="@(ComponentStyle("RightBar")
+                                + @styleAttributes.GetSettings("default","MainLayout","RightBar"))">
+                                <RightBar /></div>
                 </div>
             </div>
         </tr>
 
         <tr class="BottomLeftRight">
             <div class="tablerowdiv wrapper" style="@borderStyle("BottomLeft","BottomRight")">
-                <div style="@ComponentStyle("BottomLeft")"><BottomLeft /></div>
-                <div style="@ComponentStyle("BottomRight")"><BottomRight /></div>
+                <div style="@(ComponentStyle("BottomLeft")
+                            + @styleAttributes.GetSettings("default","MainLayout","BottomLeft"))">
+                            <BottomLeft /></div>
+                <div style="@(ComponentStyle("BottomRight")
+                            + @styleAttributes.GetSettings("default","MainLayout","BottomRight"))">
+                            <BottomRight /></div>
             </div>
         </tr>
 
-        <tr class="StatusBar"><div class="tablerowdiv" style="@ComponentStyle("StatusBar")"><StatusBar /></div></tr>
+<tr class="StatusBar">
+    <div class="tablerowdiv" style="@(ComponentStyle("StatusBar")
+                                    + @styleAttributes.GetSettings("default","MainLayout","StatusBar"))">
+                                    <StatusBar /></div>
+</tr>
 
-        <tr class="Footer"><div class="tablerowdiv" style="@ComponentStyle("Footer")"><Footer /></div></tr>
+<tr class="Footer">
+    <div class="tablerowdiv" style="@(ComponentStyle("Footer")
+                                    + @styleAttributes.GetSettings("default","MainLayout","Footer"))">
+                                    <Footer /></div>
+</tr>
 
     </table>
 </div>
